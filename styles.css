@@ -721,3 +721,25 @@ html {
     animation: fadeInUp 0.6s ease-out;
 }
 
+
+
+.gallery-video-item {
+    grid-column: 1 / -1; /* Faz o item do vídeo ocupar todas as colunas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.gallery-video-item iframe {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Mantém a proporção do vídeo */
+}
+
+@media (max-width: 768px) {
+    .gallery-video-item {
+        grid-column: auto; /* Remove o span de coluna em telas menores */
+    }
+}
+
